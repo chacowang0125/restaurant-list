@@ -4,6 +4,13 @@ A website for users to search good restaurants.
 
 ## Screenshots
 
+- Main page
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/main-page.png)
+- Show page
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/restaurant-detail.png)
+- Result not found
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/noresult.png)
+
 ## Features
 
 - Can see all restaurants in main page
@@ -49,3 +56,7 @@ This server is now listening at localhost:3000
 ```
 
 6. Now you can visit the website to see restaurant list. [http://localhost:3000](http://localhost:3000/)
+
+## Contributor
+
+- Chaco Wang
