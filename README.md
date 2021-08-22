@@ -5,7 +5,7 @@ A website for users to search good restaurants.
 ## Screenshots
 
 - Main page
-  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/main-page.png)
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/main.png)
 - Show page
   ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/restaurant-detail.png)
 - Result not found
