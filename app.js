@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const restaurantList = require('./restaurant.json')
-
+const Restaurant = require('./models/restaurant')
 
 // require express-handlebars
 const exphbs = require('express-handlebars')
@@ -28,7 +28,10 @@ app.use(express.static('public'))
 
 // routes setting
 app.get('/', (req, res) => {
-    res.render('index', { restaurants: restaurantList.results })
+    Restaurant.find()
+        .lean()
+        .then(restaurants => res.render('index', { restaurants }))
+        .catch(error => console.error(error))
 })
 
 app.get('/restaurants/:number', (req, res) => {
