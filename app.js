@@ -49,9 +49,12 @@ app.post('/restaurants', (req, res) => {
         .catch(error => console.log(error))
 })
 
-app.get('/restaurants/:number', (req, res) => {
-    const restaurant = restaurantList.results.find(item => item.id.toString() === req.params.number)
-    res.render('show', { restaurants: restaurant })
+app.get('/restaurants/:id', (req, res) => {
+    const id = req.params.id
+    return Restaurant.findById(id)
+        .lean()
+        .then((restaurants) => res.render('show', { restaurants }))
+        .catch(error => console.log(error))
 })
 
 app.get('/search/', (req, res) => {
