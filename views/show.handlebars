@@ -47,6 +47,7 @@
 			<button type="submit" class="btn btn-warning btn-lg mr-3 mb-3">返回首頁</button>
 		</a>
 			<button type="button" class="btn btn-danger btn-lg mb-3" data-toggle="modal" data-target="#deleteModal">刪除餐廳</button>
+			{{!-- Modal  --}}
 		<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -58,7 +59,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-						<form action="/restaurants/{{ restaurants._id }}/delete" method="POST" style="display: inline;">
+						<form action="/restaurants/{{ restaurants._id }}?_method=DELETE" method="POST" style="display: inline;">
 							<button type="submit" class="btn btn-danger" data-target="#deleteModal">刪除餐廳</button>
 						</form>
 					</div>

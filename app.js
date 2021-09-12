@@ -5,6 +5,7 @@ const port = 3000
 const restaurantList = require('./restaurant.json')
 const Restaurant = require('./models/restaurant')
 const bodyParser = require('body-parser')
+const methodOverride = require('method-override')
 
 // require express-handlebars
 const exphbs = require('express-handlebars')
@@ -27,6 +28,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 
 // setting static files
 app.use(express.static('public'))
@@ -66,7 +68,7 @@ app.get('/restaurants/:id/edit', (req, res) => {
         .catch(error => console.log(error))
 })
 
-app.post('/restaurants/:id/edit', (req, res) => {
+app.put('/restaurants/:id/', (req, res) => {
     const id = req.params.id
     const { name, name_en, category, image, location, phone, google_map, rating, description } = req.body
     return Restaurant.findById(id)
@@ -86,7 +88,7 @@ app.post('/restaurants/:id/edit', (req, res) => {
         .catch(error => console.log(error))
 })
 
-app.post('/restaurants/:id/delete', (req, res) => {
+app.delete('/restaurants/:id', (req, res) => {
     const id = req.params.id
     return Restaurant.findById(id)
         .then(restaurant => restaurant.remove())
