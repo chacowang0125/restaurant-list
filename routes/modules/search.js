@@ -4,7 +4,7 @@ const router = express.Router()
 const Restaurant = require('../../models/restaurant')
 const restaurantList = require('../../restaurant.json')
 
-router.get('/search/', (req, res) => {
+router.get('/', (req, res) => {
     const keyword = req.query.keyword
     const restaurants = restaurantList.results.filter(item => item.name.toLowerCase().includes(keyword.toLowerCase().trim()))
     if (restaurants.length > 0) {
