@@ -20,7 +20,7 @@
 - 餐廳編輯頁
   ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/edit-page.png)
 - 錯誤頁
-  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/noresult.png)
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/error.png)
 
 ## Prerequisites
 
