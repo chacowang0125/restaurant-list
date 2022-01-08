@@ -1,61 +1,72 @@
 # Restaurant List
 
-A website for users to search good restaurants.
-
-## Screenshots
-
-- Main page
-  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/main.png)
-- Show page
-  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/restaurant-detail.png)
-- Result not found
-  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/noresult.png)
+透過 Node.js/ Express/ MongoDB 打造的餐廳資訊網
 
 ## Features
 
-- Can see all restaurants in main page
-- Click restaurant card to get more information
-- Search restaurants by restaurant name in the search bar
+- 使用者可以新增餐廳
+- 使用者可以瀏覽全部的餐廳
+- 使用者可以瀏覽餐廳的詳細資料
+- 使用者可以修改餐廳資料
+- 使用者可以刪除餐廳資料
+- 使用者可以透過搜尋餐廳名稱來找到特定的餐廳
 
-## Environment
+## Preview
 
-1. Node.js
-2. Bootstrap v4.0
+- 首頁
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/index-page.png)
+- 餐廳詳細頁
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/detail-page.png)
+- 餐廳編輯頁
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/edit-page.png)
+- 錯誤頁
+  ![image](https://github.com/chacowang0125/restaurant-list/blob/main/public/img/noresult.png)
+
+## Prerequisites
+
+- Express v4.17.1
+- Express-Handlebars v5.3.3
+- Method-Override v3.0.0
+- Mongoose v6.0.5
 
 ## Installation
 
-1. Open your terminal and use git to clone this project
+1. 打開終端機 (Terminal) 輸入以下訊息，下載專案至本機
 
 ```bash
 git clone https://github.com/chacowang0125/restaurant-list.git
 ```
 
-2.  Enter the restaurant_list files
+2.  進入專案目錄資料夾
 
 ```bash
 cd restaurant_list
 ```
 
-3.  Install npm and nodemon
+3. 安裝 npm 及 nodemon
 
 ```bash
 npm install -g
 npm install nodemon
 ```
 
-4.  Use nodemon to start the project
+4. 加入種子資料
+
+```bash
+npm run seed
+```
+
+5.  啟動伺服器來執行專案
 
 ```bash
 npm run dev
 ```
 
-5.  Server is setup successfully if the following message appears:
+6.  出現以下訊息即可打開瀏覽器輸入 [http://localhost:3000](http://localhost:3000/) 開始使用
 
 ```bash
-This server is now listening at localhost:3000
+This server is listening on localhost:3000
 ```
-
-6. Now you can visit the website to see restaurant list. [http://localhost:3000](http://localhost:3000/)
 
 ## Contributor
 
