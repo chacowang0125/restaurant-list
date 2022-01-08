@@ -1,6 +1,6 @@
 # Restaurant List
 
-透過 Node.js/ Express/ MongoDB 打造的餐廳資訊網
+透過 Node.js/ Express/ MongoDB/ Bootstrap 打造的餐廳資訊網
 
 ## Features
 
@@ -28,6 +28,7 @@
 - Express-Handlebars v5.3.3
 - Method-Override v3.0.0
 - Mongoose v6.0.5
+
 
 ## Installation
 
